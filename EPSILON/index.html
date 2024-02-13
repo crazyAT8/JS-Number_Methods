@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Number Method EPSILON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript Number Method</u>: <mark>EPSILON</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this method returns the difference between the smallest floating point number greater than 1 and 1.</li>
+                <li>Number.EPSILON has the value of 2.220446049250313e-16</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>Number.EPSILON()</i></p>
+            <h4><i>Similar to:</i></h4>
+            <ul>
+                <li>MAX VALUE Property</li>
+                <li>MIN VALUE Property</li>
+                <li>MAX SAFE INTEGER Property</li>
+                <li>MIN SAFE INTEGER Property</li>
+                <li>NEGATIVE INFINITY Property</li>
+                <li>POSITIVE INFINITY Property</li>
+            </ul>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Number</td>
+                            <td>2.220446049250313e-16</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li>EPSILON is a property of the JavaScript Number object.</li>
+                <li>You can only use it as <mark>Number.EPSILON</mark></li>
+                <li>Using x.EPSILON, where x is a variable, will return undefined.</li>
+                <li><mark>Number.EPSILON</mark> is an ECMAScript6 (ES6) feature.</li>
+                <li>ES6 (JavaScript 2015) is supported in all modern browsers since June 2017</li>
+                <li><mark>Number.EPSILON</mark> is not supported in Internet Explorer.</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_number_epsilon.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let x = Number.EPSILON;
+        let y = 100;
+
+        document.getElementById("example1").innerHTML = x;
+        document.getElementById("example2").innerHTML = y.EPSILON;
+    </script>
+</body>
+</html>
