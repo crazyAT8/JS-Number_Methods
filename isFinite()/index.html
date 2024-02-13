@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Number Method Number.isFinite()</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript Number Method</u>: <mark>Number.isFinite()</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this method returns true if a number is a finite number.</li>
+                <li>Infinite (not finite) numbers are Infinity, -Infinity, or NaN</li>
+                <li>Otherwise it returns false.</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>Number.isFinite(value)</i></p>
+            <h4><i>Similar to:</i></h4>
+            <ul>
+                <li>Global isFinite() method</li>
+                <li>Global isNaN() method</li>
+                <li>Number.isNaN() method</li>
+                <li>POSITIVE INFINITY Property</li>
+                <li>NEGATIVE INFINITY Property</li>
+            </ul>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table class="parameters" style="padding-bottom: 10px;">
+                    <caption><b>Parameters</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>value</td>
+                            <td>
+                                Required.<br>
+                                The value to be tested.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A boolean</td>
+                            <td><mark>true</mark> if the value is a finite Number, otherwise <mark>false</mark>.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li>
+                    Difference Between isFinite() and Number.isFinite()
+                    <ul>
+                        <li><mark>isFinite()</mark> returns true if a value is a finite number.</li>
+                        <li><mark>Number.isFinite()</mark> returns true if a number is a finite number.</li>
+                        <li>In other words: <mark>isFinite()</mark> converts the value to a number before testing it.</li>
+                    </ul>
+                </li>
+                <li>ECMAScript6 (ES6) feature</li>
+                <li>ES6 (JavaScript 2015) is supported in all modern browsers since June 2017</li>
+                <li>is not supported in Internet Explorer</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_isfinite_number.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                let result1 = Number.isFinite(123);                                         <br>
+                                let result2 = Number.isFinite("123");   <br>
+                                <br>
+                                document.getElementById ("example1").innerHTML = result1;                   <br>
+                                document.getElementById ("example2").innerHTML = result2;                   <br>
+                                document.getElementById ("example3").innerHTML = isFinite("123");           <br>
+                                document.getElementById ("example4").innerHTML = Number.isFinite("123");    <br>
+                                <br>
+                                let res1 = "";                                                              <br>
+                                res1 += Number.isFinite(+1.23) + ": +1.23&lt;br&gt;";                       <br>
+                                res1 += Number.isFinite(-1.23) + ": -1.23&lt;br&gt;";                       <br>
+                                res1 += Number.isFinite('2005/12/12') + ": '2005/12/12'&lt;br&gt;";         <br>
+                                <br>
+                                document.getElementById("example5").innerHTML = res1;                       <br>
+                                <br>
+                                let res2 = "";                                                              <br>
+                                res2 += Number.isFinite(5-2) + ": 5-2&lt;br&gt;";                           <br>
+                                res2 += Number.isFinite(5/2) + ": 5/2&lt;br&gt;";                           <br>
+                                res2 += Number.isFinite(0) + ": 0&lt;br&gt;";                               <br>
+                                res2 += Number.isFinite(0/0) + ": 0/0&lt;br&gt;";                           <br>
+                                res2 += Number.isFinite(Infinity) + ": Infinity&lt;br&gt;";                 <br>
+                                res2 += Number.isFinite(-Infinity) + ": -Infinity&lt;br&gt;";               <br>
+                                res2 += Number.isFinite(NaN) + ": NaN&lt;br&gt;";                           <br>
+                                <br>
+                                document.getElementById("example6").innerHTML = res2;
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
+                    <li><span id="example4"></span></li>
+                    <li><span id="example5"></span></li>
+                    <li><span id="example6"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let result1 = Number.isFinite(123);
+        let result2 = Number.isFinite("123");
+
+        document.getElementById("example1").innerHTML = result1;
+        document.getElementById("example2").innerHTML = result2;
+        document.getElementById("example3").innerHTML = isFinite("123");
+        document.getElementById("example4").innerHTML = Number.isFinite("123");
+
+        let res1 = "";
+        res1 += Number.isFinite(+1.23) + ": +1.23<br>";
+        res1 += Number.isFinite(-1.23) + ": -1.23<br>";
+        res1 += Number.isFinite('2005/12/12') + ": '2005/12/12'<br>";
+
+        document.getElementById("example5").innerHTML = res1;
+
+        let res2 = "";
+        res2 += Number.isFinite(5-2) + ": 5-2<br>";
+        res2 += Number.isFinite(5/2) + ": 5/2<br>";
+        res2 += Number.isFinite(0) + ": 0<br>";
+        res2 += Number.isFinite(0/0) + ": 0/0<br>";
+        res2 += Number.isFinite(Infinity) + ": Infinity<br>";
+        res2 += Number.isFinite(-Infinity) + ": -Infinity<br>";
+        res2 += Number.isFinite(NaN) + ": NaN<br>";
+
+        document.getElementById("example6").innerHTML = res2;
+    </script>
+</body>
+</html>
