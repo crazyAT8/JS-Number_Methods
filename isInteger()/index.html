@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Number Method .isInteger()</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript Number Method</u>: <mark>.isInteger()</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>this method returns true if a value is an integer of the datatype Number.</li>
+                <li>Otherwise it returns false.</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>Number.isInteger(value)</i></p>
+            <h4><i>Similar to:</i></h4>
+            <ul>
+                <li>Number.isSafeInteger() Method</li>
+                <li>MAX SAFE INTEGER Property</li>
+                <li>MIN SAFE INTEGER Property</li>
+            </ul>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table class="parameters" style="padding-bottom: 10px;">
+                    <caption><b>Parameters</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>value</td>
+                            <td>
+                                Required.<br>
+                                The value to be tested.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A boolean</td>
+                            <td>
+                                true if the value is an integer of the datatype Number.<br>
+                                Otherwise false.
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li>ECMAScript6 (ES6) feature</li>
+                <li>ES6 (JavaScript 2015) is supported in all modern browsers since June 2017</li>
+                <li><mark>Number.isInteger()</mark> is not supported in Internet Explorer.</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="https://www.w3schools.com/jsref/jsref_isinteger.asp">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let result1 = 
+        "Is 123 an integer? " + Number.isInteger(123) + "<br>" +
+        "Is -123 an integer? " + Number.isInteger(-123) + "<br>" +
+        "Is '123' an integer? " + Number.isInteger('123');
+
+        document.getElementById("example1").innerHTML = result1;
+
+        let result2 =
+        "Is 4-2 an integer? " + Number.isInteger(4-2) + "<br>" +
+        "Is 4/2 an integer? " + Number.isInteger(4/2) + "<br>" +
+        "Is 5-2 an integer? " + Number.isInteger(5-2) + "<br>" +
+        "Is 5/2 an integer? " + Number.isInteger(5/2);
+
+        document.getElementById("example2").innerHTML = result2;
+
+        let result3 =
+        "Is 0 an integer? " + Number.isInteger(0) + "<br>" +
+        "Is 0/0 an integer? " + Number.isInteger(0/0) + "<br>" +
+        "Is 0.5 an integer? " + Number.isInteger(0.5) + "<br>" +
+        "Is false an integer? " + Number.isInteger(false) + "<br>" +
+        "Is Infinity an integer? " + Number.isInteger(Infinity) + "<br>" +
+        "Is -Infinityo an integer? " + Number.isInteger(-Infinity) + "<br>" +
+        "Is NaN an integer? " + Number.isInteger(NaN);
+
+        document.getElementById("example3").innerHTML = result3;
+    </script>
+</body>
+</html>
