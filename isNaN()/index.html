@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Number Method isNaN()</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>JavaScript Number Method</u>: <mark>isNaN()</mark></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Definition</u>:</b>
+                <li>Short for "Not-a-Number"</li>
+                <li>NaN is a number that is not a legal number.</li>
+                <li>The Number.isNaN() method returns true if the value is NaN, and type is a Number.</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u><i>Syntax</i></u></h1>
+            <p><i>Number.isNaN(value)</i></p>
+            <h4><i>Similar to:</i></h4>
+            <ul>
+                <li>NaN() Property</li>
+                <li>isNaN() global method</li>
+            </ul>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <table class="parameters" style="padding-bottom: 10px;">
+                    <caption><b>Parameters</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>value</td>
+                            <td>
+                                Required.<br>
+                                The value to be tested.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="padding-top: 10px;">
+                    <caption><b>Return Value</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A boolean.</td>
+                            <td>true if the value is Number.NaN, otherwise false.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <ul><b><u>Notes</u>:</b>
+                <li>Difference Between isNaN() and Number.isNaN()
+                    <ul>
+                        <li>isNaN() method returns true if a value is Not-a-Number.</li>
+                        <li>Number.isNaN() returns true if a number is Not-a-Number.</li>
+                        <li>In other words: isNaN() converts the value to a number before testing it.</li>
+                    </ul>
+                </li>
+                <li><mark>Number.isNaN()</mark> is an ECMAScript6 (ES6) feature.</li>
+                <li>ES6 (JavaScript 2015) is supported in all modern browsers since June 2017.</li>
+                <li>Not supported in Internet Explorer.</li>
+            </ul>
+            <ul><b><u>Reference</u>:</b>
+                <li>
+                    <a href="">W3schools</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                let result1 = <br>
+                                "Is 123 NaN? " + Number.isNaN(123) + "&lt;br&gt;" +                         <br>
+                                "Is -123 NaN? " + Number.isNaN(-1.23) + "&lt;br&gt;" +                      <br>
+                                "Is '123' NaN? " + Number.isNaN('123') + "&lt;br&gt;" +                     <br>
+                                "Is 0/0 NaN? " + Number.isNaN(0 / 0);                                       <br>
+                                <br>
+                                document.getElementById ("example1").innerHTML = result1;                    <br>
+                                <br>
+                                let result2 =                                                               <br>
+                                "Is 5-2 NaN? " + Number.isNaN(5-2) + "&lt;br&gt;" +                         <br>
+                                "Is 0 NaN? " + Number.isNaN(0) + "&lt;br&gt;" +                                 <br>
+                                "Is 'Hello' NaN? " + Number.isNaN('Hello') + "&lt;br&gt;" +                     <br>
+                                "Is '2005/12/12\ NaN? " + Number.isNaN('2005/12/12') + "&lt;br&gt;" +           <br>
+                                "Is ' ' NaN? " + Number.isNaN('');                                             <br>
+                                <br>
+                                document.getElementById ("example2").innerHTML = result2;                        <br>
+                                <br>
+                                let text1 = "Hello";                                                            <br>
+                                document.getElementById ("example3").innerHTML = isNaN(text1);                   <br>
+                                let text2 = "Hello";                                                            <br>
+                                document.getElementById ("example4").innerHTML = Number.isNaN(text2);            <br>
+                                <br>
+                                let result3 =                                                                   <br>
+                                "Is true NaN? " + Number.isNaN(true) + "&lt;br&gt;" +                           <br>
+                                "Is true NaN? " + Number.isNaN(false) + "&lt;br&gt;" +                          <br>
+                                "Is undefined NaN? " + Number.isNaN(undefined) + "&lt;br&gt;" +                     <br>
+                                "Is 'NaN' NaN? " + Number.isNaN('NaN') + "&lt;br&gt;" +                             <br>
+                                "Is NaN NaN? " + Number.isNaN(NaN);                                             <br>
+                                <br>
+                                document.getElementById ("example5").innerHTML = result3;
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+                    <li><span id="example2"></span></li>
+                    <li><span id="example3"></span></li>
+                    <li><span id="example4"></span></li>
+                    <li><span id="example5"></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let result1 =
+        "Is 123 NaN? " + Number.isNaN(123) + "<br>" +
+        "Is -123 NaN? " + Number.isNaN(-1.23) + "<br>" +
+        "Is '123' NaN? " + Number.isNaN('123') + "<br>" +
+        "Is 0/0 NaN? " + Number.isNaN(0 / 0);
+
+        document.getElementById("example1").innerHTML = result1;
+
+        let result2 =
+        "Is 5-2 NaN? " + Number.isNaN(5-2) + "<br>" +
+        "Is 0 NaN? " + Number.isNaN(0) + "<br>" +
+        "Is 'Hello' NaN? " + Number.isNaN('Hello') + "<br>" +
+        "Is '2005/12/12\ NaN? " + Number.isNaN('2005/12/12') + "<br>" +
+        "Is ' ' NaN? " + Number.isNaN('');
+
+        document.getElementById("example2").innerHTML = result2;
+
+        let text1 = "Hello";
+        document.getElementById("example3").innerHTML = isNaN(text1);
+        let text2 = "Hello";
+        document.getElementById("example4").innerHTML = Number.isNaN(text2);
+
+        let result3 =
+        "Is true NaN? " + Number.isNaN(true) + "<br>" +
+        "Is true NaN? " + Number.isNaN(false) + "<br>" +
+        "Is undefined NaN? " + Number.isNaN(undefined) + "<br>" +
+        "Is 'NaN' NaN? " + Number.isNaN('NaN') + "<br>" +
+        "Is NaN NaN? " + Number.isNaN(NaN);
+
+        document.getElementById("example5").innerHTML = result3;
+    </script>
+</body>
+</html>
